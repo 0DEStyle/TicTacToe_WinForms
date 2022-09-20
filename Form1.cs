@@ -69,16 +69,22 @@ namespace TicTacToe_WinForms
             if ((C1.Text == B2.Text) && (B2.Text == A3.Text) && (!C1.Enabled))
                 hasWinner = true;
 
-            if (hasWinner || round == 9)
+            if(round == 9 && !hasWinner)
+            {
+                disableButtons();
+                //relative path of a file or add file to resource
+                SoundPlayer splayer1 = new SoundPlayer(Resource.coolsound);
+                splayer1.Play();
+                MessageBox.Show("Tie!");
+            }
+            if (hasWinner)
             {
                 disableButtons();
                 //relative path of a file or add file to resource
                 SoundPlayer splayer1 = new SoundPlayer(Resource.coolsound);
                 splayer1.Play();
 
-                if(round == 9)
-                    MessageBox.Show("Tie!");
-                else if (turn > 0)
+                if (turn > 0)
                     MessageBox.Show("Winner is X!");
                 else if (turn < 0)
                     MessageBox.Show("Winner is O!");
