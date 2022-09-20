@@ -1,0 +1,37 @@
+Event driven programming
+event handler(what event to perform)
+
+1.show icon false
+2.maximizebox false
+2.text = tic tac toe
+winform setting
+set icon
+no resize
+
+file menu 
+	Option
+		new game
+		Exit
+	Help
+		About
+		MessageBox("by who", "Tic Tac Toe About")
+
+
+button sqare size
+ font size for X and O
+make 9 buttons
+adjust form
+asign buttons name
+
+a1 a2 a3 row
+b1 b2 b3
+c1 c2 c3
+column
+
+x  =-1, -3 = win
+o  = 1,  3 = win
+"" = 0, empty space
+
+change turn back times -1
+below 8 won
+after 8 tie
