@@ -76,12 +76,12 @@ namespace TicTacToe_WinForms
                 SoundPlayer splayer1 = new SoundPlayer(Resource.coolsound);
                 splayer1.Play();
 
-                if (turn > 0)
+                if(round == 9)
+                    MessageBox.Show("Tie!");
+                else if (turn > 0)
                     MessageBox.Show("Winner is X!");
                 else if (turn < 0)
                     MessageBox.Show("Winner is O!");
-                else if (round == 9)
-                    MessageBox.Show("Tie!");
             }
         }
         private void disableButtons()
